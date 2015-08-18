@@ -12,7 +12,7 @@ server.use(function (request, response) {
     response.status(200).send("Alive and well.")
 });
 
-var development = process.env.NODE_ENV === "development";
+var development = true;
 
 var port = process.env.port || process.env.PORT || (development ? 3000 : 80);
 
