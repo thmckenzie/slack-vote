@@ -1,5 +1,7 @@
+var slack = require('./slack_data');
+
 module.exports.sayHello = function (req, res){
-  res.send("<form method='post' action='/asdf'><input type='text'></input><br><input type='submit'></input></form>");
+  res.send("<form method='post' action='/asdf'><input type='text' name='inputField'></input><br><input type='submit' name='submitButton'></input></form>");
 };
 
 module.exports.goodbye = function (req, res){
@@ -7,5 +9,7 @@ module.exports.goodbye = function (req, res){
 };
 
 module.exports.post = function(req, res){
-  res.send("post");
+  var text = req.body.inputField;
+  slack.sendMessage(text);
+  res.send('done');
 };
