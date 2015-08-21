@@ -14,3 +14,6 @@ var test = require('./test.js')
 router.route('/asdf').get(test.sayHello);
 router.route('/assf').get(test.goodbye);
 router.route('/asdf').post(test.post);
+//Receive
+router.route('/receive').get(test.sayHi);
+router.route('/receive').post(test.newPost);

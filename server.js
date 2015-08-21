@@ -24,6 +24,6 @@ server.on('error', function (error) {
   //we'll handle error here after adding cluster option.
 });
 
-server.listen(port , function () {
+server.listen(3001 , function () {
   console.log('Up and running on port ' + port + " for " + hostname);
 });
